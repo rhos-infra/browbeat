@@ -1,10 +1,11 @@
 ---
 - hosts: tester
+  vars_files:
+    - vars/all.yml
   tasks:
-
     - name: Run Browbeat
       shell: |
         source {{browbeat_venv}}/bin/activate
-        ./browbeat.py all
+        ./browbeat.py rally
       args:
         chdir: "{{ browbeat_path }}"

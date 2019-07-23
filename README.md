@@ -20,6 +20,11 @@ infrared browbeat -h
 
 To install and run browbeat on your TripleO cloud
 
+1) clone the browbeat to home directory and export the roles path, for example
+cd ~/
+git clone https://opendev.org/x/browbeat
+export ANSIBLE_ROLES_PATH=<home directory>/browbeat/ansible/install/roles
+
 ```
 infrared browbeat --install yes --config-file <filename> -e @<ansible_vars_file>
 ```

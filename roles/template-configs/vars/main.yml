@@ -1,6 +1,0 @@
-browbeat_elastic_enabled: false
-browbeat_elastic_host: "1.2.3.4.5"
-browbeat_grafana_enabled: false
-browbeat_grafana_host: "1.2.3.4.5"
-browbeat_config_file: "browbeat-minimal.yaml.j2"
-browbeat_cloud_name: "browbeat_qe_ci"
