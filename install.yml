@@ -13,7 +13,6 @@
     - stockpile
     - { role: browbeat-results, when: browbeat_results_in_httpd}
     - firewall
-    - perfkitbenchmarker
     - rally
     - shaker
     - { role: flavors, when: browbeat_create_flavors}
