@@ -5,7 +5,7 @@
   when: test.install
 
 - name: Install monitoring
-  import_playbook: collectd-openstack.yml
+  import_playbook: collectd.yml
   tags:
     - monitor
   when: test.monitor
