@@ -26,3 +26,8 @@ subparsers:
                       help:
                         Visualize system metrics through grafana dashboards
                       default: False
+                  containers:
+                      type: Bool
+                      help:
+                        Use containers in monitor tasks
+                      default: False

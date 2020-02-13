@@ -4,11 +4,21 @@
     - install
   when: test.install
 
-- name: Install monitoring
+- name: Install monitoring (non-containerized)
+  import_playbook: collectd-openstack.yml
+  tags:
+    - monitor-non-containerized
+  when:
+      - test.monitor
+      - not test.containers
+
+- name: Install monitoring (containerized)
   import_playbook: collectd.yml
   tags:
-    - monitor
-  when: test.monitor
+    - monitor-containerized
+  when:
+      - test.monitor
+      - test.containers
 
 - name: Upload grafana dashboards
   import_playbook: grafana-dashboards.yml
